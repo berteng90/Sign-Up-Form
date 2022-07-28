@@ -70,32 +70,53 @@ body {
 
 #header,
 #form-footer {
-    flex: 2 1 auto;
+    flex: 2 0 0;
     width: auto;
     height: auto;
 
 }
 
 #form-body {
-    flex: 1 1 auto;
+    flex: 1 0 0;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: auto;
 }
 
-.forms {
+.h2 {
     display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 auto;
+    justify-content: flex-start;
 }
 
-.forms div {
+.forms {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.forms>div {
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+}
+
+
+.forms>div>div {
     display: flex;
     flex-flow: column nowrap;
-    margin: 1rem;
 }
 
 div label {
     color: var(--main-color);
+    font-weight: 900;
+    font-size: 10px;
+}
+
+div input {
+    border-style: solid;
+    opacity: 15%;
+    border-radius: 6%;
 }
 
 h1 {
