@@ -8,7 +8,14 @@
     src: url(./fonts/Roboto/Roboto-Thin.ttf);
 }
 
-:root {}
+@font-face {
+    font-family: 'Norse';
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+:root {
+    --main-color: rgba(0, 0, 0);
+}
 
 
 html,
@@ -17,6 +24,8 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Roboto';
+    color: var(--main-color);
 }
 
 #container {
@@ -33,7 +42,7 @@ body {
     flex: 1 0 0;
     width: 100%;
     height: 100%;
-    background-image: url(./images/Tattoo1.jpg);
+    background-image: url(./images/shrub.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -51,7 +60,8 @@ body {
 #form-body,
 #form-footer {
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     align-items: center;
     padding: 1rem 2rem;
     padding-top: 0;
@@ -64,7 +74,6 @@ body {
     width: auto;
     height: auto;
 
-
 }
 
 #form-body {
@@ -73,13 +82,29 @@ body {
     height: auto;
 }
 
-h1 {
-    color: black;
+.forms {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 auto;
 }
 
-h2 {
-    text-align: left;
-    font-family: 'Roboto';
+.forms div {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem;
+}
+
+div label {
+    color: var(--main-color);
+}
+
+h1 {
+    color: var(--main-color)
+}
+
+#form-body h2 {
+    font-weight: 900;
+    font-size: 50;
 }
 
 #bar {
@@ -99,7 +124,7 @@ h2 {
 
 h3 {
     color: rgba(240, 240, 240);
-    font-family: 'Rooster';
+    font-family: 'Norse';
     font-size: 3rem;
     margin: 0;
     padding: 0;
