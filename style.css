@@ -58,7 +58,6 @@ body {
 
 
 #header,
-#form-body,
 #form-footer {
     display: flex;
     flex-flow: row wrap;
@@ -68,6 +67,8 @@ body {
     padding-top: 0;
     padding-bottom: 2rem;
 }
+
+
 
 #header,
 #form-footer {
@@ -84,10 +85,6 @@ body {
 
 
 
-#form-body {
-    flex: 1 1 0;
-    flex-flow: column nowrap;
-}
 
 .h2 {
     display: flex;
@@ -108,6 +105,7 @@ body {
 .forms>div>div {
     display: flex;
     flex-flow: column nowrap;
+    margin-bottom: 2rem;
 }
 
 div label {
@@ -118,25 +116,35 @@ div label {
 
 div input {
     border-style: solid;
-    width: 60%;
+    width: 80%;
     height: 22px;
     opacity: 15%;
     border-radius: 5px;
-    margin-right: 15rem;
-    margin-bottom: 2rem;
+    margin-right: 5rem;
 }
+
 
 h1 {
     color: var(--main-color)
 }
 
-#form-body {
+#form-body .forms {
+    margin: 0;
+    padding: 0;
+    width: auto;
     box-shadow: 0 1px 10px rgb(0 0 0 / 0.2);
 }
 
 #form-body h2 {
     font-size: 25px;
+    margin-left: 15px;
     opacity: 80%;
+}
+
+.forms div {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
 }
 
 .forms label {
@@ -185,7 +193,18 @@ button {
     border: none;
 }
 
+#foot {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+}
+
 h5 em {
     font-style: normal;
     color: #596D48;
+}
+
+input:focus {
+    opacity: 70%;
 }

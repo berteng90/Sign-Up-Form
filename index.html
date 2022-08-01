@@ -27,46 +27,49 @@
                     You know you want to.
                 </h2>
             </div>
-            <div id="form-body">
+            <form id="form-body" action="#" method="post">
                 <div class="forms">
-                    <h2>Let's do this!</h2>
+                    <div>
+                        <h2>Let's do this!</h2>
+                    </div>
                     <div>
                         <div>
                             <label for="firstname">FIRST NAME</label>
-                            <input type="text">
+                            <input type="text" id="firstname" minlength="3" maxlength="255" required>
                         </div>
                         <div>
                             <label for="lastname">LAST NAME</label>
-                            <input type="text">
+                            <input type="text" id="firstname" minlength="2" maxlength="255" required>
                         </div>
                     </div>
                     <div>
                         <div>
                             <label for="">EMAIL</label>
-                            <input type="email">
+                            <input type="email" id="email" pattern="@" required>
                         </div>
                         <div>
                             <label for="phonenumber">PHONE NUMBER</label>
-                            <input type="number">
+                            <input type="number" id="phonenumber" required>
                         </div>
                     </div>
                     <div>
                         <div>
                             <label for="password">PASSWORD</label>
-                            <input type="password">
+                            <input type="password" id="password" required>
                         </div>
                         <div>
                             <label for="confirmpass">CONFIRM PASSWORD</label>
-                            <input type="password">
+                            <input type="password" id="confirmpass" required>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="form-footer">
                 <div id="foot">
                     <button type="submit">Create Account</button>
-                    <h5>Already have an account? <em>Log In</em></h5>
+                    <h5>Already have an account?<em>Log In</em></h5>
                 </div>
+            </form>
+            <div id="form-footer">
+
             </div>
         </div>
     </div>
