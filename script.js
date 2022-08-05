@@ -6,7 +6,6 @@ function inputChangeEvent() {
     const checkEmail = document.getElementById("email")
     const checkPhone = document.getElementById("phonenumber")
     const checkPass = document.getElementById("password")
-
     const input = document.querySelectorAll("input")
     input.forEach(input => input.addEventListener('focusout', () => {
         if (input.id === 'firstname') {
@@ -14,20 +13,26 @@ function inputChangeEvent() {
             console.log(check)
             if (check === true) {
                 validate = true
+                const label = document.querySelector(".error")
+                label.remove();
             } else {
-                console.log("TEST")
-                const div = document.querySelector(".firstname")
-                const label = document.createElement("label")
-                label.style.color = "#FF0000";
-                label.textContent = `Firstname should have no number`;
-                div.appendChild(label)
-            }
+                const label = document.querySelector(".error")
+                if (!label) {
+                    const div = document.querySelector(".firstname")
+                    const label = document.createElement("label")
+                    label.style.color = "#FF0000";
+                    label.className = "error";
+                    label.textContent = `Firstname should have no number`;
+                    div.appendChild(label)
+                } else {
+                    console.log('test')
+                }
 
+            }
         }
     }))
 
 }
-
 inputChangeEvent();
 function validateForm() {
     event.preventDefault();
