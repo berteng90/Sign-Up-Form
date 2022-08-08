@@ -68,22 +68,17 @@ body {
     padding-bottom: 2rem;
 }
 
-
-
 #header,
 #form-footer {
     flex: 2 1 0;
     width: auto;
     height: auto;
-
 }
 
 #header {
     padding-top: 60px;
     padding-right: 200px;
 }
-
-
 
 
 .h2 {
@@ -211,17 +206,11 @@ button:hover {
 }
 
 
-
 a {
     font-style: normal;
     color: #596D48;
     text-decoration: none;
 }
-
-input:focus {
-    opacity: 70%;
-}
-
 
 input:invalid {
     border-color: rgb(255, 0, 0);
